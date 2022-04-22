@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
@@ -7,6 +10,6 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.UseDefaultFiles(); // можно заменить
-app.UseStaticFiles();  // на app.UseFileServer();
+app.UseStaticFiles(); // на app.UseFileServer();
 
 app.Run();
